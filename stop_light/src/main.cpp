@@ -63,7 +63,5 @@ void loop() {
     light_1_sequence();
     ENABLED_LIGHT = 2;
   }
-  
-
 }
 
