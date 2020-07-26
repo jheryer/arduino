@@ -7,7 +7,7 @@
 
 #define number 6
 
-int digits[] = {63,6,115,121,92,109,111,25,125};
+int digits[] = {63,24,115,121,92,109,111,25,127,125};
 
 void setup() {
   pinMode(DATA, OUTPUT);
@@ -18,7 +18,7 @@ void setup() {
 void loop() {
   
   int i;
-  for(i = 0; i < 9; i++) {
+  for(i = 0; i < 10; i++) {
     digitalWrite(LATCH,LOW);
     shiftOut(DATA, CLOCK, MSBFIRST, digits[i]);
     digitalWrite(LATCH, HIGH);
