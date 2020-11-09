@@ -1,3 +1,5 @@
+#ifdef UNIT_TEST
+
 #include <Arduino.h>
 #include <Arduino.h>
 
@@ -25,3 +27,5 @@ void loop() {
     delay(1000);
   }
 }
+
+#endif

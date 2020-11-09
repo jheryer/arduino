@@ -1,6 +1,13 @@
-#include <Arduino.h>
-#include <SoftwareSerial.h>
+#ifndef UNIT_TEST
 
+#ifdef UNIT_TEST
+    #include <ArduinoFake.h>
+#else
+    #include <Arduino.h>
+    #include <SoftwareSerial.h>
+#endif
+
+#include <stringparse.h>
 
 // Left motor pins
 #define LM_PWM_SPEED 9     
@@ -79,8 +86,8 @@ void loop()  {
 if(HM18.available() > 0) {
   inData = HM18.readStringUntil('\n');
   inData.trim();
-  String deviceValue = getValue(inData,':',0);
-  String numberValue = getValue(inData,':',1);
+  String deviceValue = parseValue(inData,':',0);
+  String numberValue = parseValue(inData,':',1);
 
   if(deviceValue == "motor2") {
     rightspeed = numberValue.toInt();
@@ -109,3 +116,4 @@ analogWrite(RM_PWM_SPEED, rightspeed);
 
 }
 
+#endif

@@ -10,7 +10,6 @@
                 "/home/jheryer/Projects/arduino/arduino-projects/binary_counter/src",
                 "/home/jheryer/.platformio/packages/framework-arduino-avr/cores/arduino",
                 "/home/jheryer/.platformio/packages/framework-arduino-avr/variants/standard",
-                "/home/jheryer/.platformio/lib/SoftwareSerial",
                 "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                 "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/HID/src",
                 "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
@@ -26,7 +25,6 @@
                     "/home/jheryer/Projects/arduino/arduino-projects/binary_counter/src",
                     "/home/jheryer/.platformio/packages/framework-arduino-avr/cores/arduino",
                     "/home/jheryer/.platformio/packages/framework-arduino-avr/variants/standard",
-                    "/home/jheryer/.platformio/lib/SoftwareSerial",
                     "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
                     "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/HID/src",
                     "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
@@ -37,7 +35,7 @@
                 ]
             },
             "defines": [
-                "PLATFORMIO=50001",
+                "PLATFORMIO=50002",
                 "ARDUINO_AVR_UNO",
                 "F_CPU=16000000L",
                 "ARDUINO_ARCH_AVR",
