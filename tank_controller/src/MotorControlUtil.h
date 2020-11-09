@@ -1,6 +1,6 @@
 
-#ifndef __STRING_PARSE_H
-#define __STRING_PARSE_H
+#ifndef __MotorControlUtil_H
+#define __MotorControlUtil_H
 
 #ifdef UNIT_TEST
     #include <ArduinoFake.h>
