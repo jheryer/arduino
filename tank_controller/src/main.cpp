@@ -7,7 +7,7 @@
     #include <SoftwareSerial.h>
 #endif
 
-#include <stringparse.h>
+#include <MotorControlUtil.h>
 
 // Left motor pins
 #define LM_PWM_SPEED 9     
@@ -86,8 +86,8 @@ void loop()  {
 if(HM18.available() > 0) {
   inData = HM18.readStringUntil('\n');
   inData.trim();
-  String deviceValue = parseValue(inData,':',0);
-  String numberValue = parseValue(inData,':',1);
+  String deviceValue = parseMotorControlInputValue(inData,':',0);
+  String numberValue = parseMotorControlInputValue(inData,':',1);
 
   if(deviceValue == "motor2") {
     rightspeed = numberValue.toInt();

@@ -8,7 +8,7 @@
     #include <Arduino.h>
 #endif
 
-String parseValue(String data, char separator, int index);
+String parseMotorControlInputValue(String data, char separator, int index);
 
 
 #endif
