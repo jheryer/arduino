@@ -21,6 +21,11 @@ void test_initial_degree_motor_value() {
     TEST_ASSERT_EQUAL_INT(0,getLeftMotorValue(&subject));
     TEST_ASSERT_EQUAL_INT(0,getRightMotorValue(&subject));
 
+    // STOP
+    parseMotorControlInputDegree(&subject,-1);
+    TEST_ASSERT_EQUAL_INT(0,getLeftMotorValue(&subject));
+    TEST_ASSERT_EQUAL_INT(0,getRightMotorValue(&subject));
+
     // FORWARD
     parseMotorControlInputDegree(&subject,70);
     TEST_ASSERT_EQUAL_INT(255,getLeftMotorValue(&subject));

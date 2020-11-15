@@ -35,6 +35,12 @@ void initMotorValue(MotorValue *mValue) {
 void parseMotorControlInputDegree(MotorValue *mValue, int degree)
 {
 
+  //STOP
+  if(degree == -1) {
+    mValue->right = 0;
+    mValue->left = 0;
+  }
+
   //Forward
   if (degree >= 65 && degree < 115)
   {

@@ -80,7 +80,6 @@ void loop()  {
   // if (Serial.available()) // Read from Serial Monitor and send to HM-10
   //   HM18.write(Serial.read());
 
-//Serial.println('help');
 if(HM18.available() > 0) {
   inData = HM18.readStringUntil('\n');
   inData.trim();
