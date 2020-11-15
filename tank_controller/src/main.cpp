@@ -30,6 +30,7 @@ SoftwareSerial HM18(RX,TX);
 
 char appData;
 String inData = "";
+MotorValue mValue;
 
 
 void setup() {
@@ -40,7 +41,6 @@ void setup() {
   Serial.setTimeout(10);
   HM18.setTimeout(10);
 
-
   pinMode(LM_PWM_SPEED, OUTPUT);
   pinMode(LM_IN1, OUTPUT);
   pinMode(LM_IN2, OUTPUT);
@@ -48,9 +48,11 @@ void setup() {
   pinMode(RM_PWM_SPEED, OUTPUT);
   pinMode(RM_IN3, OUTPUT); 
   pinMode(RM_IN4, OUTPUT);
+
+  initMotorValue(&mValue);
 }
 
-
+/*
 String getValue(String data, char separator, int index)
 {
   int found = 0;
@@ -67,14 +69,10 @@ String getValue(String data, char separator, int index)
 
   return found>index ? data.substring(strIndex[0], strIndex[1]) : "";
 }
-
+*/
 
 
 void loop()  {
-
-// HM18.write("test");
-// analogWrite(BLUE_LED, blue_brightness);
-// analogWrite(RED_LED, red_brightness);
 
 //BLE 
   // if (HM18.available()) // Read from HM-10 and send to Serial Monitor
@@ -89,6 +87,27 @@ if(HM18.available() > 0) {
   String deviceValue = parseMotorControlInputValue(inData,':',0);
   String numberValue = parseMotorControlInputValue(inData,':',1);
 
+  parseMotorControlInputDegree(&mValue,numberValue.toInt());
+  int rightMotorValue = getRightMotorValue(&mValue);
+  int leftMotorValue = getLeftMotorValue(&mValue);
+
+  //gt 0 forward
+  if(rightMotorValue > 0) {
+    digitalWrite(RM_IN3, HIGH);
+  } else {
+    digitalWrite(RM_IN3, LOW);
+  }
+
+  if(leftMotorValue > 0) {
+    digitalWrite(LM_IN1, HIGH);
+  } else {
+    digitalWrite(LM_IN1, LOW);
+  }
+
+  rightspeed = abs(rightMotorValue);
+  leftspeed = abs(leftMotorValue);
+
+/*
   if(deviceValue == "motor2") {
     rightspeed = numberValue.toInt();
   }
@@ -108,6 +127,7 @@ if(HM18.available() > 0) {
   } else {
     digitalWrite(LM_IN1, LOW);
   }
+  */
 
 }
 

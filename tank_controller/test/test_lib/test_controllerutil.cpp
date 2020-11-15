@@ -1,4 +1,4 @@
-//#ifdef UNIT_TEST
+#ifdef UNIT_TEST
 #include <unity.h>
 #include <MotorControlUtil.h>
 
@@ -148,4 +148,4 @@ int main( int argc, char **argv) {
 }
 
 
-//#endif
+#endif
