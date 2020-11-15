@@ -8,7 +8,15 @@
     #include <Arduino.h>
 #endif
 
-String parseMotorControlInputValue(String data, char separator, int index);
+typedef struct MotorValue {
+    int right;
+    int left;
+} MotorValue;
 
+String parseMotorControlInputValue(String data, char separator, int index);
+void parseMotorControlInputDegree(MotorValue *mValue, int degree);
+void initMotorValue(MotorValue *mValue);
+int getLeftMotorValue(MotorValue *mValue);
+int getRightMotorValue(MotorValue *mValue);
 
 #endif

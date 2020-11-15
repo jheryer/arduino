@@ -12,11 +12,12 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug",
-            "executable": "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/.pio/build/native/program",
-            "toolchainBinDir": "",
+            "executable": "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/.pio/build/uno/firmware.elf",
+            "projectEnvName": "uno",
+            "toolchainBinDir": "/home/jheryer/.platformio/packages/toolchain-atmelavr/bin",
             "preLaunchTask": {
                 "type": "PlatformIO",
-                "task": "Pre-Debug"
+                "task": "Pre-Debug (uno)"
             },
             "internalConsoleOptions": "openOnSessionStart"
         },
@@ -24,8 +25,9 @@
             "type": "platformio-debug",
             "request": "launch",
             "name": "PIO Debug (skip Pre-Debug)",
-            "executable": "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/.pio/build/native/program",
-            "toolchainBinDir": "",
+            "executable": "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/.pio/build/uno/firmware.elf",
+            "projectEnvName": "uno",
+            "toolchainBinDir": "/home/jheryer/.platformio/packages/toolchain-atmelavr/bin",
             "internalConsoleOptions": "openOnSessionStart"
         }
     ]
