@@ -93,14 +93,18 @@ if(HM18.available() > 0) {
   //gt 0 forward
   if(rightMotorValue > 0) {
     digitalWrite(RM_IN3, HIGH);
+    digitalWrite(RM_IN4, LOW);
   } else {
     digitalWrite(RM_IN3, LOW);
+    digitalWrite(RM_IN4, HIGH);
   }
 
   if(leftMotorValue > 0) {
     digitalWrite(LM_IN1, HIGH);
+    digitalWrite(LM_IN2, LOW);
   } else {
     digitalWrite(LM_IN1, LOW);
+    digitalWrite(LM_IN2, HIGH);
   }
 
   rightspeed = abs(rightMotorValue);
