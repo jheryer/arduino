@@ -8,9 +8,15 @@
             "includePath": [
                 "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/include",
                 "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/src",
-                "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/.pio/libdeps/native/ArduinoFake/src",
+                "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                "/home/jheryer/.platformio/packages/framework-arduino-avr/cores/arduino",
+                "/home/jheryer/.platformio/packages/framework-arduino-avr/variants/standard",
                 "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/lib/mod",
                 "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/lib/util",
+                "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                 "/home/jheryer/.platformio/packages/tool-unity",
                 ""
             ],
@@ -19,20 +25,34 @@
                 "path": [
                     "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/include",
                     "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/src",
-                    "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/.pio/libdeps/native/ArduinoFake/src",
+                    "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src",
+                    "/home/jheryer/.platformio/packages/framework-arduino-avr/cores/arduino",
+                    "/home/jheryer/.platformio/packages/framework-arduino-avr/variants/standard",
                     "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/lib/mod",
                     "/home/jheryer/Projects/arduino/arduino-projects/tank_controller/lib/util",
+                    "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src",
+                    "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/HID/src",
+                    "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/SPI/src",
+                    "/home/jheryer/.platformio/packages/framework-arduino-avr/libraries/Wire/src",
                     "/home/jheryer/.platformio/packages/tool-unity",
                     ""
                 ]
             },
             "defines": [
                 "PLATFORMIO=50003",
+                "ARDUINO_AVR_UNO",
+                "F_CPU=16000000L",
+                "ARDUINO_ARCH_AVR",
+                "ARDUINO=10808",
+                "__AVR_ATmega328P__",
                 ""
             ],
             "intelliSenseMode": "gcc-x64",
-            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compilerPath": "/home/jheryer/.platformio/packages/toolchain-atmelavr/bin/avr-gcc",
             "compilerArgs": [
+                "-mmcu=atmega328p",
                 ""
             ]
         }
